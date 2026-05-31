@@ -1,36 +1,25 @@
 .scene {
   flex: 1;
-  /* width: clamp(250px, 30vw, 450px); */
   aspect-ratio: 4 / 5;
   width: 100%;
   max-width: 280px;
   perspective: 1200px;
-  /* --3d-depth: -10px; */
+
   --3d-depth: -30px;
 }
 
 .graphic {
   position: relative;
-
   width: 100%;
   height: 100%;
 
   transform-style: preserve-3d;
-
-  /* transform: rotateY(-10deg) rotateX(10deg); */
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
-
   transition: none;
 }
 .graphic.returning {
   transition: transform 0.2s ease;
 }
-
-/* Hover */
-
-/* .scene:hover .graphic {
-  transform: rotateY(-20deg) rotate(5deg) rotateX(25deg);
-} */
 
 /* Glow */
 
@@ -140,7 +129,7 @@
     3rem 0 0 0 hsl(from var(--clr-success) h s l / 0.7);
 }
 
-/* Icon */
+/* Icons */
 
 .card svg {
   color: var(--clr-primary);
@@ -152,6 +141,8 @@
   color: var(--clr-gray);
   filter: drop-shadow(0 0 20px hsl(from var(--clr-gray-light) h s l / 0.2));
 }
+
+/* Responsivity */
 
 @media (max-width: 900px) {
   .scene {

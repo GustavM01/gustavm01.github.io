@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import HeroGraphic from "./HeroGraphic";
+import Button from "../../ui/Button/Button";
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
           <p>
             I build modern web applications using React, Firebase and Node.js.
           </p>
-          <button>View Projects</button>
+          <Button>View Projects</Button>
         </div>
 
         <HeroGraphic />

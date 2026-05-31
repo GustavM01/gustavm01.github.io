@@ -8,7 +8,7 @@
 }
 
 .hero-content {
-  width: min(1200px, 100%);
+  width: min(1100px, 100%);
   margin: 0 auto;
 
   display: flex;
@@ -22,14 +22,16 @@
 }
 
 .hero-text h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(var(--fs-2xl), 8vw, var(--fs-3xl));
 }
 
 .hero-text span {
   color: var(--clr-primary);
+  text-shadow: var(--shadow-glow);
 }
 
 .hero-text p {
+  color: var(--clr-text-muted);
   max-width: 600px;
 }
 

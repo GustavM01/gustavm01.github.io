@@ -57,7 +57,7 @@
   --fs-lg: 1.5rem;
   --fs-xl: 2rem;
   --fs-2xl: 3rem;
-  --fs-3xl: 4.5rem;
+  --fs-3xl: 5rem;
 
   /* Gradients */
   --gradient-primary: linear-gradient(
@@ -79,10 +79,6 @@
   --space-lg: 2rem;
   --space-xl: 4rem;
   --space-2xl: 6rem;
-
-  /* Hero Graphic */
-  --layer-offset: 10px;
-  --3d-depth: -10px;
 }
 
 body {

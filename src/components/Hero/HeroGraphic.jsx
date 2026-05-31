@@ -11,7 +11,8 @@ function HeroGraphic() {
   const [position, setPosition] = useState({ x: -15, y: 10 });
   const [isReturning, setIsReturning] = useState(false);
   const cardRef = useRef(null);
-  const wasInside = useRef(false);
+  const targetRef = useRef({ x: -15, y: 10 });
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMovement = (e) => {
@@ -43,12 +44,10 @@ function HeroGraphic() {
 
       if (insideZone) {
         setIsReturning(false);
-        setPosition({ x, y });
-        wasInside.current = true;
+        targetRef.current = { x, y };
       } else {
         setIsReturning(true);
-        setPosition({ x: -15, y: 10 });
-        wasInside.current = false;
+        targetRef.current = { x: -15, y: 10 };
       }
     };
 
@@ -59,27 +58,26 @@ function HeroGraphic() {
     };
   }, []);
 
-  //   const handleMouse = (e) => {
-  //     const bounds = e.currentTarget.getBoundingClientRect();
+  useEffect(() => {
+    const animate = () => {
+      setPosition((prev) => ({
+        x: prev.x + (targetRef.current.x - prev.x) * 0.25,
+        y: prev.y + (targetRef.current.y - prev.y) * 0.25,
+      }));
 
-  //     const xCenter = bounds.width / 2;
-  //     const yCenter = bounds.height / 2;
+      animationRef.current = requestAnimationFrame(animate);
+    };
 
-  //     const x = (e.clientX - bounds.left - xCenter) / 6;
-  //     const y = ((e.clientY - bounds.top - yCenter) / 6) * -1;
+    animate();
 
-  //     setPosition({ x, y });
-  //   };
+    return () => cancelAnimationFrame(animationRef.current);
+  }, []);
 
   return (
     <>
-      {/* <div style={{ position: "absolute", left: 500, top: 100 }}>
-        <p>x: {position.x}</p>
-        <p>y: {position.y}</p>
-      </div> */}
       <div ref={cardRef} className="scene">
         <div
-          className={isReturning ? "graphic returning" : "graphic"}
+          className="graphic"
           style={{
             "--rotate-x": `${position.y}deg`,
             "--rotate-y": `${position.x}deg`,
