@@ -20,14 +20,17 @@
   /* transform: rotateY(-10deg) rotateX(10deg); */
   transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
 
-  /* transition: transform 0.001s linear; */
+  transition: none;
+}
+.graphic.returning {
+  transition: transform 0.2s ease;
 }
 
 /* Hover */
 
-.scene:hover .graphic {
-  /* transform: rotateY(-20deg) rotate(5deg) rotateX(25deg); */
-}
+/* .scene:hover .graphic {
+  transform: rotateY(-20deg) rotate(5deg) rotateX(25deg);
+} */
 
 /* Glow */
 
@@ -68,7 +71,7 @@
   background: hsl(from var(--clr-primary) h s l / 0.25);
 
   /* transform: translate3d(10px, 10px, var(--3d-depth)); */
-  transform: translate3d(0px, 0px, var(--3d-depth));
+  transform: translate3d(0px, 0px, calc(var(--3d-depth) / 2));
 }
 
 .layer-2 {
@@ -100,7 +103,7 @@
   border: 1px solid hsl(from var(--clr-border) h s l / 0.08);
 
   backdrop-filter: blur(10px);
-
+  inset: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
