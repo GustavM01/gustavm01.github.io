@@ -18,8 +18,12 @@
   --clr-text-secondary: hsl(240 12% 80%);
   --clr-text-muted: hsl(240 12% 65%);
 
-  /* Border */
+  /* Border color */
   --clr-border: hsl(0 0% 100%);
+  --clr-border-secondary: var(--clr-text-secondary);
+
+  /* Border */
+  --border: 1px solid hsl(from var(--clr-border-secondary) h s l / 0.15);
 
   /* Status */
   --clr-success: hsl(142 71% 55%);
@@ -66,6 +70,12 @@
     var(--clr-primary-dark) 100%
   );
 
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--clr-primary) 0%,
+    var(--clr-primary-light) 100%
+  );
+
   --gradient-bg: radial-gradient(
     circle at top right,
     hsl(from var(--clr-primary) h s l / 0.15),
@@ -79,12 +89,27 @@
   --space-lg: 2rem;
   --space-xl: 4rem;
   --space-2xl: 6rem;
+
+  /* Navbar */
+
+  --nav-height: 8rem;
 }
 
 body {
   font-family: var(--font-primary);
   background: var(--gradient-bg), var(--clr-bg-primary);
   color: var(--clr-text-primary);
+}
+
+/* NavLink  */
+
+.nav-link.active {
+  color: var(--clr-primary);
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+.nav-link.active:hover {
+  color: var(--clr-primary);
 }
 
 /* CSS Reset (template) */
