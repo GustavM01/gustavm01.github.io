@@ -8,12 +8,8 @@
 .skills-section,
 .featured-section,
 .what-i-do-section {
-  /* max-width: 100vw; */
   min-height: 100%;
   padding: 2rem 3rem;
-}
-
-.skills-section {
   display: grid;
   gap: 2rem;
   text-align: center;

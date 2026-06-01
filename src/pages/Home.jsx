@@ -10,6 +10,7 @@ import css3Icon from "../assets/icons/css3.svg";
 import firebaseIcon from "../assets/icons/firebase.svg";
 import gitIcon from "../assets/icons/git.svg";
 import html5Icon from "../assets/icons/html5.svg";
+import Button from "../ui/Button/Button";
 
 function Home() {
   const skills = [
@@ -21,6 +22,14 @@ function Home() {
       name: "Javascript",
       icon: javascriptIcon,
     },
+    {
+      name: "HTML",
+      icon: html5Icon,
+    },
+    {
+      name: "CSS",
+      icon: css3Icon,
+    },
     // {
     //   name: "Cloudflare",
     //   icon: cloudflareIcon,
@@ -30,20 +39,12 @@ function Home() {
       icon: csharpIcon,
     },
     {
-      name: "CSS",
-      icon: css3Icon,
-    },
-    {
       name: "Firebase",
       icon: firebaseIcon,
     },
     {
       name: "Git",
       icon: gitIcon,
-    },
-    {
-      name: "HTML",
-      icon: html5Icon,
     },
   ];
 
@@ -58,8 +59,16 @@ function Home() {
               <SkillCard key={index} skill={skill} />
             ))}
           </div>
+          <Button
+            variant="outline"
+            style={{ width: "fit-content", margin: "auto" }}
+          >
+            View All Projects
+          </Button>
         </section>
-        <section className="featured-section"></section>
+        <section className="featured-section">
+          <h2>Featured projects</h2>
+        </section>
         <section className="what-i-do-section"></section>
       </div>
     </>
