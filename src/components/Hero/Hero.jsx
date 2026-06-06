@@ -37,7 +37,7 @@ function Hero() {
               About me
             </Button>
           </div>
-          <p style={{ marginBlock: "40px 20px" }}>Find me</p>
+          <p style={{ marginBlock: "50px 20px" }}>Find me</p>
           <div className="hero-link-icons">
             <a
               href="https://github.com/GustavM01"

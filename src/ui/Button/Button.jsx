@@ -6,8 +6,20 @@ function Button({
   className = "",
   variant = "primary",
   size = "md",
+  href,
   ...props
 }) {
+  if (href)
+    return (
+      <a
+        href={href}
+        className={`btn btn-${variant} btn-${size} ${className}`}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+
   return (
     <button
       className={`btn btn-${variant} btn-${size} ${className}`}

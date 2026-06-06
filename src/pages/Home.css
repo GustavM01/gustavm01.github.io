@@ -17,6 +17,8 @@
   margin-inline: auto;
 }
 
+/* Skills section */
+
 .skills-list {
   display: grid;
   /* grid-template-columns: repeat(8, 1fr); */
@@ -26,9 +28,19 @@
   gap: 1rem;
 }
 
-.featured-section {
+/* Featured section */
+
+/* .featured-section {
   min-height: 300px;
+} */
+
+.featured-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
+
+/* What i do section */
 
 .what-i-do-section {
   min-height: 300px;
