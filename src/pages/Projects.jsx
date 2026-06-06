@@ -10,7 +10,7 @@ function Projects() {
       <p>Here are some of the projects I've worked on</p>
       <div className="projects-card-container">
         {projects.map((project, index) => (
-          <ProjectCard project={project} showFooter={true} />
+          <ProjectCard key={index} project={project} showFooter={true} />
         ))}
       </div>
     </div>
