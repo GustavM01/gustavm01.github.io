@@ -15,6 +15,7 @@
 
 .about-section {
   padding: 0 7rem;
+  min-height: calc(100vh - 8rem);
 }
 
 .about-me-info {
@@ -23,12 +24,14 @@
 
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 4rem;
+}
 
-  & img {
-    width: 100%;
-    max-width: 400px;
-    min-width: 0;
-  }
+.about-me-info img {
+  width: 100%;
+  max-width: 400px;
+  min-width: 0;
+  border: var(--border);
+  border-radius: var(--radius-md);
 }
 
 .about-me-info-left {
@@ -93,7 +96,10 @@
 .skill-fill {
   background: var(--clr-primary);
   height: 0.5rem;
+  transition: width 0.5s ease-out;
 }
+
+/* Mobile */
 
 @media (max-width: 1000px) {
   .about-section {

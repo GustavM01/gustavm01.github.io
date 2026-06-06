@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
 import { Clock, Mail, MapPinnedIcon } from "lucide-react";
 
 function About() {
+  const [isVisable, setIsVisible] = useState(false);
+  const progressRef = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.intersectionRatio === 1) {
+          setIsVisible(true);
+        }
+
+        if (entry.intersectionRatio === 0) {
+          setIsVisible(false);
+        }
+      },
+      { threshold: [0, 1] },
+    );
+
+    observer.observe(progressRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   const skills = [
     { name: "HTML", level: 80 },
     { name: "CSS", level: 75 },
@@ -64,9 +87,9 @@ function About() {
         </div>
       </div>
       <div className="about-section skills">
-        <h2 style={{ marginTop: "2rem" }}>Skills & Technologies</h2>
+        <h2>Skills & Technologies</h2>
 
-        <div className="skill-info-grid">
+        <div ref={progressRef} className="skill-info-grid">
           {skills.map((skill, index) => (
             <div key={index} className="about-skills-info">
               <div className="skill-info-box">
@@ -81,7 +104,10 @@ function About() {
                 <div className="skill-bar">
                   <div
                     className="skill-fill"
-                    style={{ width: `${skill.level}%` }}
+                    style={{
+                      width: isVisable ? `${skill.level}%` : "0%",
+                      transitionDelay: `${index * 100}ms`,
+                    }}
                   ></div>
                 </div>
               </div>
