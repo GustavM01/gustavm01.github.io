@@ -7,7 +7,7 @@
     text-align: center;
     padding-bottom: 1.5rem;
   }
-  & p {
+  & > p {
     text-align: center;
     font-size: var(--fs-sm);
     color: var(--clr-text-muted);
@@ -37,5 +37,11 @@
     grid-template-columns: repeat(1, minmax(0, 400px));
     padding-inline: 2rem;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects-card-container {
+    padding-inline: 1.5rem;
   }
 }

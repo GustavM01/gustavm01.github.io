@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 function ProjectCard({ project, showFooter }) {
   return (
     <div className="project-card">
-      <img className="project-img" src={project.image} alt={project.title} />
+      <img className="project-img" src={project.image[0]} alt={project.title} />
       <h3>{project.title}</h3>
       <p>{project.description}</p>
       <div className="project-technologie-wrapper">
