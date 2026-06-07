@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
-import { Clock, Mail, MapPinnedIcon } from "lucide-react";
+import { aboutData } from "../data/about";
+import { ChevronDown, Clock, Mail, MapPinnedIcon } from "lucide-react";
 
 function About() {
   const [isVisable, setIsVisible] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+
   const progressRef = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,18 +51,8 @@ function About() {
                   color: "var(--clr-text-secondary)",
                 }}
               >
-                Hi, I'm Gustav. Frontend-focused developer with a background in
-                .NET and full-stack development. I enjoy building responsive web
-                applications with React, JavaScript, and modern web
-                technologies. Currently looking for opportunities as a Frontend
-                Developer while continuing to expand my full-stack skills
-                through personal projects.
+                {aboutData.shortBio}
               </p>
-              {/* <p style={{ color: "var(--clr-text-muted)" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                sit ex maxime laboriosam pariatur ut omnis ea officia vero. Aut
-                molestias sed ex nihil ipsum.
-              </p> */}
             </div>
             <div className="about-me-info-box">
               <div className="about-me-info-section">
@@ -86,6 +79,25 @@ function About() {
             </div>
           </div>
           <img src="https://placehold.co/400x600" alt="Profile picture" />
+        </div>
+      </div>
+      <div className="my-journey-container">
+        <h2>My Journey</h2>
+        <div className="my-journey about-section">
+          <p
+            className={
+              showMore ? "my-journey-text" : "my-journey-text collapsed"
+            }
+          >
+            {aboutData.longBio}
+          </p>
+          <button
+            onClick={() => setShowMore((prev) => !prev)}
+            className="my-journey-btn"
+          >
+            Read More
+            <ChevronDown className={showMore ? "flipped" : "not-flipped"} />
+          </button>
         </div>
       </div>
       <div className="about-section skills">
