@@ -11,7 +11,7 @@ export const projects = [
   {
     id: 1,
     title: "Games Collection",
-    image: [snakeImg, ticTacToeImg, connectFourImg],
+    images: [ticTacToeImg, snakeImg, connectFourImg],
     description:
       "A games website with 3 games, classic snake, TicTacToe where you can challange a friend or a bot and Connect Four where you can challange a friend",
     technologies: ["React"],
@@ -23,18 +23,18 @@ export const projects = [
   {
     id: 2,
     title: "E-Commerce Store",
-    image: [webshopImg, webshopProductImg, adminOrderImg, adminProductImg],
+    images: [webshopImg, webshopProductImg, adminOrderImg, adminProductImg],
     description:
       "An e-commerce store with stripe checkout and an admin panel where you can see and manage orders and products",
     technologies: ["React", "JavaScript", "HTML", "CSS"],
     github: "...",
-    live: "https://gustavm01.github.io/Games/#/snake",
+    live: "",
     featured: true,
   },
   {
     id: 3,
     title: "Connect Four",
-    image: [connectFourImg],
+    images: [connectFourImg],
     description: "This is a website with Connect Four",
     technologies: ["React", "JavaScript"],
     github: "...",
@@ -44,7 +44,7 @@ export const projects = [
   //   {
   //     id: 4,
   //     title: "Australien Blog",
-  //     image: ,
+  //     images: ,
   //     description: "...",
   //     technologies: ["React", "Firebase", "Google Auth"],
   //     github: "...",

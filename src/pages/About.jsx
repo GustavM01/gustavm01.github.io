@@ -48,16 +48,18 @@ function About() {
                   color: "var(--clr-text-secondary)",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores iure adipisci qui facilis. Blanditiis modi corporis
-                aperiam similique nobis dolorem praesentium! Rem odit vero eum
-                asperiores possimus, aut eligendi voluptatem?
+                Hi, I'm Gustav. Frontend-focused developer with a background in
+                .NET and full-stack development. I enjoy building responsive web
+                applications with React, JavaScript, and modern web
+                technologies. Currently looking for opportunities as a Frontend
+                Developer while continuing to expand my full-stack skills
+                through personal projects.
               </p>
-              <p style={{ color: "var(--clr-text-muted)" }}>
+              {/* <p style={{ color: "var(--clr-text-muted)" }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
                 sit ex maxime laboriosam pariatur ut omnis ea officia vero. Aut
                 molestias sed ex nihil ipsum.
-              </p>
+              </p> */}
             </div>
             <div className="about-me-info-box">
               <div className="about-me-info-section">

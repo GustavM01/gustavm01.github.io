@@ -3,7 +3,8 @@
   display: grid;
   gap: 1.5rem;
 
-  width: fit-content;
+  /* width: fit-content; */
+  width: 100%;
 
   border: var(--border);
   border-radius: var(--radius-md);
@@ -23,9 +24,74 @@
 
 .project-img {
   aspect-ratio: 16/10;
-
-  border: inherit;
+  width: 100%;
+  object-fit: cover;
+  border: var(--border);
   border-radius: var(--radius-sm);
+}
+
+.project-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-btn-container {
+  width: fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -1rem;
+  margin-top: 0.5rem;
+}
+
+.image-btn {
+  color: var(--clr-text-primary);
+  border-radius: 50%;
+  width: 30px;
+  aspect-ratio: 1/1;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  & svg {
+    margin: 0 auto;
+  }
+}
+
+.image-btn:hover {
+  /* color: var(--clr-text-secondary); */
+  background-color: hsl(from var(--clr-text-muted) h s l / 0.2);
+}
+
+.image-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.circle-container {
+  display: flex;
+  gap: 4px;
+}
+
+.circle {
+  height: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: var(--clr-text-muted);
+  transition:
+    background-color 0.4s ease,
+    scale 0.4s ease;
+}
+
+.circle.filled {
+  background: var(--clr-text-primary);
+  scale: 1.15;
+  /* border: 1px solid var(--clr-primary); */
+  box-shadow: 0 0 30px hsl(from var(--clr-primary) h s l / 0.25);
 }
 
 .project-technologie-wrapper {

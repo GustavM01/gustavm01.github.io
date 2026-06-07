@@ -13,8 +13,11 @@ import html5Icon from "../assets/icons/html5.svg";
 import Button from "../ui/Button/Button";
 import ProjectCard from "../ui/ProjectCard/ProjectCard";
 import { projects } from "../data/projects";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
   const skills = [
     {
       name: "React",
@@ -70,6 +73,7 @@ function Home() {
             ))}
           </div>
           <Button
+            onClick={() => navigate("/projects")}
             variant="outline"
             style={{ width: "fit-content", margin: "auto" }}
           >
