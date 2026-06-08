@@ -44,7 +44,7 @@ export const projects = [
   //   {
   //     id: 4,
   //     title: "Australien Blog",
-  //     images: ,
+  //     images: [],
   //     description: "...",
   //     technologies: ["React", "Firebase", "Google Auth"],
   //     github: "...",

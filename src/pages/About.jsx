@@ -1,7 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
 import { aboutData } from "../data/about";
-import { ChevronDown, Clock, Mail, MapPinnedIcon } from "lucide-react";
+import {
+  Brush,
+  ChevronDown,
+  Clock,
+  Globe,
+  Mail,
+  MapPinnedIcon,
+  Zap,
+} from "lucide-react";
 
 function About() {
   const [isVisable, setIsVisible] = useState(false);
@@ -100,6 +108,50 @@ function About() {
           </button>
         </div>
       </div>
+      <div className="what-i-do-container">
+        <h2>What I do</h2>
+        <div className="about-section what-i-do">
+          <div className="what-i-do-card">
+            <div className="what-i-do-icon">
+              <Globe size={26} />
+            </div>
+            <div className="what-i-do-text">
+              <p>Web Applications</p>
+              <p>
+                Building responsive and interactive web applications with clean
+                code and great user expperience.
+              </p>
+            </div>
+          </div>
+
+          <div className="what-i-do-card">
+            <div className="what-i-do-icon">
+              <Brush size={26} />
+            </div>
+            <div className="what-i-do-text">
+              <p>UI & UX</p>
+              <p>
+                Creating modern, intuitive and visually appealing interfaces
+                that are both functional and user-friendly.
+              </p>
+            </div>
+          </div>
+
+          <div className="what-i-do-card">
+            <div className="what-i-do-icon">
+              <Zap size={26} />
+            </div>
+            <div className="what-i-do-text">
+              <p>Problem Solving</p>
+              <p>
+                Solving challenges and turning ideas into efficient and scalable
+                solutions through code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="about-section skills">
         <h2>Skills & Technologies</h2>
 

@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div className="projects-container">
       <h2>My Projects</h2>
-      <p>Here are some of the projects I've worked on</p>
+      <p>Here are some of my personal projects I've worked on</p>
       <div className="projects-card-container">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} showFooter={true} />
