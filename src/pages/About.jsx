@@ -15,13 +15,15 @@ function About() {
   const [isVisable, setIsVisible] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
+  const threshold = window.innerWidth <= 875 ? 0.5 : 0.75;
+
   const progressRef = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
 
-        if (entry.intersectionRatio === 1) {
+        if (entry.intersectionRatio >= threshold) {
           setIsVisible(true);
         }
 
@@ -29,7 +31,7 @@ function About() {
           setIsVisible(false);
         }
       },
-      { threshold: [0, 1] },
+      { threshold: [0, threshold] },
     );
 
     observer.observe(progressRef.current);
