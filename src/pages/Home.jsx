@@ -80,7 +80,7 @@ function Home() {
             View All Projects
           </Button>
         </section>
-        <section className="what-i-do-section"></section>
+        {/* <section className="what-i-do-section"></section> */}
       </div>
     </>
   );

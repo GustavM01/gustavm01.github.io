@@ -3,7 +3,7 @@ import "./Socials.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
-function Socials() {
+function Socials({ size = 40 }) {
   return (
     <div className="hero-link-icons">
       <a
@@ -12,7 +12,7 @@ function Socials() {
         rel="noopener noreferrer"
         aria-label="GitHub"
       >
-        <FaGithub size={40} />
+        <FaGithub size={size} />
       </a>
       <a
         href="https://www.linkedin.com/in/gustav-m%C3%A5rtensson-b74589274/"
@@ -20,14 +20,14 @@ function Socials() {
         rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
-        <FaLinkedin size={40} />
+        <FaLinkedin size={size} />
       </a>
       <a
         href="mailto:gustav.martensson01@gmail.com"
         aria-label="Email"
         title="Send me an email"
       >
-        <Mail size={40} />
+        <Mail size={size} />
       </a>
     </div>
   );
