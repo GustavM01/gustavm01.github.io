@@ -136,6 +136,12 @@
   color: var(--clr-primary);
 }
 
+.nav-link-mobile-footer {
+  margin: 2rem 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--clr-border);
+}
+
 @media (max-width: 800px) {
   .nav-left p {
     display: none;

@@ -19,11 +19,11 @@
   --clr-text-muted: hsl(240 12% 65%);
 
   /* Border color */
-  --clr-border: hsl(0 0% 100%);
+  --clr-border: hsl(from var(--clr-border-secondary) h s l / 0.1);
   --clr-border-secondary: var(--clr-text-secondary);
 
   /* Border */
-  --border: 1px solid hsl(from var(--clr-border-secondary) h s l / 0.15);
+  --border: 1px solid var(--clr-border);
 
   /* Status */
   --clr-success: hsl(142 71% 55%);

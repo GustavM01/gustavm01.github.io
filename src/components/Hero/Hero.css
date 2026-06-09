@@ -69,21 +69,6 @@
   width: fit-content;
 }
 
-.hero-link-icons {
-  display: flex;
-  gap: 1rem;
-  /* justify-content: center; */
-  color: var(--clr-gray);
-  & svg {
-    transition: color 0.2s ease;
-  }
-
-  & svg:hover {
-    color: var(--clr-gray-light);
-    cursor: pointer;
-  }
-}
-
 @media (max-width: 900px) {
   .hero-content {
     flex-direction: column;
@@ -94,9 +79,5 @@
 @media (max-width: 480px) {
   .hero-content {
     text-align: center;
-  }
-
-  .hero-link-icons {
-    justify-content: center;
   }
 }

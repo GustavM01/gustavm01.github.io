@@ -1,0 +1,20 @@
+.hero-link-icons {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  color: var(--clr-gray);
+  & svg {
+    transition: color 0.2s ease;
+  }
+
+  & svg:hover {
+    color: var(--clr-gray-light);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-link-icons {
+    justify-content: center;
+  }
+}

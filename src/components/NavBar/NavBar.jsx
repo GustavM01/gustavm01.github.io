@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import { Folder, House, Menu, User, X } from "lucide-react";
+import Socials from "../../ui/Socials/Socials";
 
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,30 +57,21 @@ function NavBar() {
         </button>
       </div>
       <div className={isOpen ? "mobile-menu open" : "mobile-menu"}>
-        <NavLink
-          onClick={() => setIsOpen(false)}
-          to={"/"}
-          className="nav-link-mobile"
-        >
+        <NavLink to={"/"} className="nav-link-mobile">
           <House />
           <span>Home</span>
         </NavLink>
-        <NavLink
-          onClick={() => setIsOpen(false)}
-          to={"/about"}
-          className="nav-link-mobile"
-        >
+        <NavLink to={"/about"} className="nav-link-mobile">
           <User />
           <span>About me</span>
         </NavLink>
-        <NavLink
-          onClick={() => setIsOpen(false)}
-          to={"/projects"}
-          className="nav-link-mobile"
-        >
+        <NavLink to={"/projects"} className="nav-link-mobile">
           <Folder />
           <span>Projects</span>
         </NavLink>
+        <div className="nav-link-mobile-footer">
+          <Socials />
+        </div>
       </div>
     </nav>
   );
