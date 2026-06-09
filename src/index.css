@@ -45,7 +45,8 @@
 
   /* Layout */
   --container-width: 1200px;
-  --navbar-height: 80px;
+  --nav-height: 8rem;
+  --nav-height-mobile: 4rem;
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -89,10 +90,6 @@
   --space-lg: 2rem;
   --space-xl: 4rem;
   --space-2xl: 6rem;
-
-  /* Navbar */
-
-  --nav-height: 8rem;
 }
 
 body {

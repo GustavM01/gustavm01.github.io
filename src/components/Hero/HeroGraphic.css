@@ -146,12 +146,12 @@
 
 @media (max-width: 900px) {
   .scene {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .scene {
+    /* max-width: 200px; */
     display: none;
   }
 }
+
+/* @media (max-width: 480px) {
+  .scene {
+  }
+} */
