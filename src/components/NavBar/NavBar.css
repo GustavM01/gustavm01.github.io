@@ -77,7 +77,7 @@
 }
 
 .nav-link {
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   transition: color var(--transition-fast);
 }
 
@@ -88,8 +88,7 @@
 /* Mobile */
 
 .navbar.scrolled-mobile {
-  /* background-color: rgb(16, 14, 32); */
-  background-color: var(--clr-bg-primary);
+  background-color: var(--clr-bg-secondary);
 }
 
 .nav-right-mobile {
@@ -102,7 +101,7 @@
 
 .mobile-menu {
   position: fixed;
-  background-color: var(--clr-bg-primary);
+  background-color: var(--clr-bg-secondary);
   bottom: 0;
   left: 0;
   right: 0;

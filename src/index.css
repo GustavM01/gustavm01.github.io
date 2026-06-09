@@ -98,11 +98,20 @@ body {
   color: var(--clr-text-primary);
 }
 
+/* Mobile */
+
+@media (max-width: 480px) {
+  :root {
+    --nav-height: var(--nav-height-mobile);
+  }
+}
+
 /* NavLink  */
 
 .nav-link.active {
   color: var(--clr-primary);
-  border-bottom: 1px solid var(--clr-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
 }
 
 .nav-link.active:hover {
