@@ -1,5 +1,6 @@
 import {
   BrowserRouter,
+  HashRouter,
   Route,
   Routes,
   ScrollRestoration,
@@ -16,7 +17,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
 
         <ScrollToTop />
@@ -27,7 +28,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

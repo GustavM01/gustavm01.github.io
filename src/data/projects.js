@@ -13,7 +13,7 @@ export const projects = [
     title: "Games Collection",
     images: [ticTacToeImg, snakeImg, connectFourImg],
     description:
-      "A games website with 3 games, classic snake, TicTacToe where you can challange a friend or a bot and Connect Four where you can challange a friend",
+      "A games website with 3 games, classic snake, TicTacToe where you can challange a friend or a bot and Connect Four where you can challange a friend.",
     technologies: ["React"],
     github: "...",
     live: "https://gustavm01.github.io/Games/",
@@ -25,8 +25,16 @@ export const projects = [
     title: "E-Commerce Store",
     images: [webshopImg, webshopProductImg, adminOrderImg, adminProductImg],
     description:
-      "An e-commerce store with stripe checkout and an admin panel where you can see and manage orders and products",
-    technologies: ["React", "JavaScript", "HTML", "CSS"],
+      "An e-commerce store with stripe checkout and an admin panel where you can see and manage orders and products.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Stripe",
+      "Firebase",
+      "Google Auth",
+    ],
     github: "...",
     live: "",
     featured: true,
