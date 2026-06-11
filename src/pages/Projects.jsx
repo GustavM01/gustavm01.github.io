@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Projects.css";
 import { projects } from "../data/projects";
 import ProjectCard from "../ui/ProjectCard/ProjectCard";
 
 function Projects() {
+  useEffect(() => {
+    document.title = "Projects | Gustav Mårtensson";
+  }, []);
+
   return (
     <div className="projects-container">
       <h2>My Projects</h2>

@@ -18,6 +18,11 @@ function About() {
   const threshold = window.innerWidth <= 875 ? 0.5 : 0.75;
 
   const progressRef = useRef();
+
+  useEffect(() => {
+    document.title = "About | Gustav Mårtensson";
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

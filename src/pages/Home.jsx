@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import SkillCard from "../ui/SkillCard/SkillCard";
 import "./Home.css";
@@ -17,6 +17,10 @@ import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Gustav Mårtensson";
+  }, []);
 
   const skills = [
     {
