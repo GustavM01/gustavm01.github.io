@@ -1,0 +1,30 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+
+  text-align: center;
+  margin: var(--nav-height) 1.5rem 0;
+}
+
+.not-found h1 {
+  color: var(--clr-primary);
+  text-shadow: var(--shadow-glow);
+
+  font-size: var(--fs-3xl);
+}
+
+.not-found h2 {
+  color: var(--clr-text-secondary);
+}
+
+.not-found p {
+  color: var(--clr-text-muted);
+}
+
+.not-found button {
+  margin-top: 2rem;
+}

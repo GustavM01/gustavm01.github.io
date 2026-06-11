@@ -13,23 +13,25 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ScrollToTop from "./utils/ScrollToTop";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <HashRouter>
+    <HashRouter>
+      <div className="app-layout">
         <NavBar />
-
         <ScrollToTop />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
         <Footer />
-      </HashRouter>
-    </>
+      </div>
+    </HashRouter>
   );
 }
 
