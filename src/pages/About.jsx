@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
 import { aboutData } from "../data/about";
-import profilePicture from "../assets/pictures/profile-picture.png";
+import profilePicture from "../assets/pictures/profile-picture.webp";
 import {
   Brush,
   ChevronDown,
