@@ -94,7 +94,11 @@ function About() {
                 </div>
               </div>
             </div>
-            <img src="https://placehold.co/400x600" alt="Profile picture" />
+            {/* <img src="https://placehold.co/400x600" alt="Profile picture" /> */}
+            <img
+              src="src\assets\pictures\profile-picture.png"
+              alt="Profile picture"
+            />
           </div>
         </div>
         <div className="my-journey-container">
